@@ -1,0 +1,21 @@
+plugins {
+	id 'java'
+}
+
+group = 'seungDuru'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation "org.jooq:jooq-codegen:${jooqVersion}"
+	runtimeOnly 'com.mysql:mysql-connector-j:8.2.0'
+}

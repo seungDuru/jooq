@@ -44,9 +44,9 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
-    jooqGenerator 'com.mysql:mysql-connector-j'
+    jooqGenerator project(":jooq-custom")
     jooqGenerator "org.jooq:jooq:${jooqVersion}"
-    jooqGenerator "org.jooq:jooq-meta:${jooqVersion}"\
+    jooqGenerator "org.jooq:jooq-meta:${jooqVersion}"
 }
 
 tasks.named('test') {
@@ -76,7 +76,7 @@ jooq {
 
                     database {
                         name = 'org.jooq.meta.mysql.MySQLDatabase'
-
+                        unsignedTypes = false
                         schemata {
                             schema {
                                 inputSchema = 'sakila'
@@ -96,6 +96,8 @@ jooq {
                     target {
                         directory = 'src/generated'
                     }
+
+                    strategy.name = 'seungduru.jooqcustom.generator.JPrefixGeneratorStrategy'
                 }
             }
         }
