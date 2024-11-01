@@ -29,8 +29,3 @@
 - jOOQ의 코드 생성 기능을 사용하여 타입 안전한 SQL 쿼리를 자바 코드로 작성
 - 다양한 SQL 쿼리 및 조인 작업을 jOOQ를 통해 학습
 - MySQL과 jOOQ 연동 및 성능 최적화 방법 익히기
-
-## 참고 자료
-- jOOQ 공식 문서
-- Spring Boot와 jOOQ 통합
-- Sakila DB GitHub - MySQL용 샘플 데이터베이스
